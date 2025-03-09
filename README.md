@@ -1,7 +1,6 @@
-# Common Module
+# TARS Common Library
 
 TARS 프로젝트의 Common Module은 여러 모듈에서 공통으로 사용되는 유틸리티, 예외 처리, 오류 메시지 등을 제공하는 순수 Kotlin 라이브러리입니다.
-
 
 ## 주의사항
 
@@ -16,9 +15,60 @@ TARS 프로젝트의 Common Module은 여러 모듈에서 공통으로 사용되
 
 ## 사용 방법
 
-### 1. 의존성 추가
+### 1. 설치 방법
 
-> jit pack 반영중
+### Gradle
+
+```groovy
+repositories {
+    mavenCentral()
+    maven { url 'https://jitpack.io' }
+}
+
+dependencies {
+    implementation 'com.github.christopher3810:common_lib:Tag'
+}
+```
+
+### Maven
+
+```xml
+<repositories>
+    <repository>
+        <id>jitpack.io</id>
+        <url>https://jitpack.io</url>
+    </repository>
+</repositories>
+
+<dependency>
+    <groupId>com.github.christopher3810</groupId>
+    <artifactId>common_lib</artifactId>
+    <version>v0.1.0</version>
+</dependency>
+```
+
+### 요구사항
+
+- Java 21 이상
+- Kotlin 2.0.0 이상
+
+### 버저닝 규칙 (Semantic Versioning)
+
+이 라이브러리는 [Semantic Versioning 2.0.0](https://semver.org/) 표준을 준수합니다.
+
+버전 번호는 `MAJOR.MINOR.PATCH` 형식을 따릅니다:
+
+1. **MAJOR** 버전: 이전 버전과 호환되지 않는 API 변경이 있을 때 증가
+2. **MINOR** 버전: 이전 버전과 호환되는 방식으로 기능이 추가될 때 증가
+3. **PATCH** 버전: 이전 버전과 호환되는 버그 수정이 있을 때 증가
+
+### 릴리스 태그 규칙
+
+GitHub 릴리스 태그는 항상 `v` 접두사를 붙여 사용합니다:
+
+- `v0.1.0`
+- `v1.0.0`
+- `v1.1.0`
 
 ### 2. 오류 메시지 사용
 
