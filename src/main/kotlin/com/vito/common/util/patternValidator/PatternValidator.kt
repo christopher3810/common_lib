@@ -114,8 +114,7 @@ object PatternValidator {
         // 길이 검증 (13자리)
         if (digitsOnly.length != 13) return false
         
-        // 앞 6자리와 뒤 7자리 분리
-        val front = digitsOnly.substring(0, 6)
+        //뒤 7자리 분리
         val back = digitsOnly.substring(6)
         
         // 뒷자리 첫 번째 숫자가 1-4 범위인지 검증
