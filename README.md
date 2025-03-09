@@ -1,10 +1,10 @@
-# TARS Common Library
+# Common Library
 
-TARS 프로젝트의 Common Module은 여러 모듈에서 공통으로 사용되는 유틸리티, 예외 처리, 오류 메시지 등을 제공하는 순수 Kotlin 라이브러리입니다.
+Common Lib 은 여러 모듈에서 공통으로 사용되는 유틸리티, 예외 처리, 오류 메시지 등을 제공하는 순수 Kotlin 라이브러리입니다.
 
 ## 주의사항
 
-1. Common Module은 순수 Kotlin 라이브러리로, Spring과 같은 프레임워크에 의존하지 않습니다.
+1. Common Lib 은 순수 Kotlin 라이브러리로, Spring과 같은 프레임워크에 의존하지 않습니다.
 2. 이 모듈에 추가되는 모든 코드는 재사용성과 경량성을 고려하여 작성되어야 합니다.
 
 ## 주요 기능
