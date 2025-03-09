@@ -1,4 +1,4 @@
-package com.tars.common.util.masking
+package com.vito.common.util.masking
 
 import io.kotest.assertions.throwables.shouldThrow
 import io.kotest.core.spec.style.DescribeSpec

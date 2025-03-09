@@ -1,4 +1,4 @@
-package com.gateway.common.util.patternValidator
+package com.vito.common.util.patternValidator
 
 /**
  * 다양한 형식의 데이터 유효성을 검증하는 유틸리티 클래스입니다.

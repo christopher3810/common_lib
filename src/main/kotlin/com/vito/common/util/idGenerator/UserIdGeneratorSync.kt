@@ -1,4 +1,4 @@
-package com.tars.common.util.idGenerator
+package com.vito.common.util.idGenerator
 
 import java.time.LocalTime
 import java.util.concurrent.atomic.AtomicInteger
@@ -28,7 +28,8 @@ object UserIdGeneratorSync {
 
         val dayPart = nowSec + 10000      // 5자리
         val randVal = Random.nextInt(100) // 2자리
-        val idStr = "%05d%d%02d%02d".format(dayPart, machineId, seqVal, randVal)
+        val idStr = "%05d%d%02d%02d".format(dayPart,
+            machineId, seqVal, randVal)
         return idStr.toLong()
     }
 

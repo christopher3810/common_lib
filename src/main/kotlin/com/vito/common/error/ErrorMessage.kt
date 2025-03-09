@@ -1,4 +1,4 @@
-package com.tars.common.error
+package com.vito.common.error
 
 enum class ErrorMessage(val code: String, val message: String) {
     // Validation Errors

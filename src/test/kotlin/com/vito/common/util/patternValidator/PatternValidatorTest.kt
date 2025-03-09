@@ -1,4 +1,4 @@
-package com.tars.common.util.patternValidator
+package com.vito.common.util.patternValidator
 
 import io.kotest.core.spec.style.DescribeSpec
 import io.kotest.data.forAll

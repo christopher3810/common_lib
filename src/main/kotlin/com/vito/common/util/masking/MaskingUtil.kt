@@ -1,6 +1,6 @@
-package com.tars.common.util.masking
+package com.vito.common.util.masking
 
-import com.tars.common.util.patternValidator.PatternValidator
+import com.vito.common.util.patternValidator.PatternValidator
 
 /**
  * 개인정보 마스킹을 위한 유틸리티 클래스

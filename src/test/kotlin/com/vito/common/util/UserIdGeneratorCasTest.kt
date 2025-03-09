@@ -1,7 +1,7 @@
-package com.tars.common.util
+package com.vito.common.util
 
-import com.tars.common.util.idGenerator.UserIdGeneratorCas
-import com.tars.common.util.idGenerator.UserIdGeneratorSync
+import com.vito.common.util.idGenerator.UserIdGeneratorCas
+import com.vito.common.util.idGenerator.UserIdGeneratorSync
 import io.kotest.core.spec.style.DescribeSpec
 import io.kotest.matchers.collections.shouldHaveSize
 import io.kotest.matchers.ints.shouldBeBetween

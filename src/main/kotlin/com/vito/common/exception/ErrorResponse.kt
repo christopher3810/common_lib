@@ -1,4 +1,4 @@
-package com.tars.common.exception
+package com.vito.common.exception
 
 import java.time.LocalDateTime
 
