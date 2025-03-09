@@ -1,41 +1,89 @@
 plugins {
     id 'java-library'
     id 'maven-publish'
+    id 'org.jetbrains.kotlin.jvm' version '2.0.0'
 }
 
-group = 'com.tars'
-version = '0.0.1-SNAPSHOT'
+group = 'com.vito'
+version = '0.1.0'
 
 repositories {
     mavenCentral()
     mavenLocal()
 }
 
+sourceSets {
+    main {
+        kotlin {
+            srcDirs = ['src/main/kotlin']
+        }
+        resources {
+            srcDirs = ['src/main/resources']
+        }
+    }
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_21
+    targetCompatibility = JavaVersion.VERSION_21
+    withSourcesJar()
+    withJavadocJar()
+}
+
 dependencies {
-    // 핵심 의존성만 유지
-    implementation 'org.jetbrains.kotlin:kotlin-reflect:1.9.25'
+    implementation 'org.jetbrains.kotlin:kotlin-stdlib:2.0.0'
+    implementation 'org.jetbrains.kotlin:kotlin-reflect:2.0.0'
     implementation 'com.fasterxml.jackson.module:jackson-module-kotlin:2.16.1'
     
-    // 테스트 의존성
     testImplementation "io.kotest:kotest-runner-junit5:5.8.0"
     testImplementation "io.kotest:kotest-assertions-core:5.8.0"
 }
 
-// JAR 파일 생성 설정
 jar {
     enabled = true
     archiveBaseName = 'common'
-    archiveVersion = '0.0.1-SNAPSHOT'
+    archiveVersion = '0.1.0'
+    from sourceSets.main.output
 }
 
-// Maven 로컬 저장소에 배포 설정
 publishing {
     publications {
         mavenJava(MavenPublication) {
             from components.java
-            groupId = 'com.tars'
-            artifactId = 'common'
-            version = '0.0.1-SNAPSHOT'
+            groupId = 'com.github.christopher3810'
+            artifactId = 'common_lib'
+            version = '0.1.0'
+            
+            pom {
+                name = 'Common Library'
+                description = 'Common utilities and models'
+                url = 'https://github.com/christopher3810/common_lib'
+                
+                licenses {
+                    license {
+                        name = 'MIT License'
+                        url = 'https://opensource.org/licenses/MIT'
+                    }
+                }
+                
+                developers {
+                    developer {
+                        id = 'christopher3810'
+                        name = 'Christopher'
+                        email = 'christopher@example.com'
+                    }
+                }
+                
+                scm {
+                    connection = 'scm:git:git://github.com/christopher3810/common_lib.git'
+                    developerConnection = 'scm:git:ssh://github.com/christopher3810/common_lib.git'
+                    url = 'https://github.com/christopher3810/common_lib'
+                }
+            }
         }
     }
+}
+
+test {
+    useJUnitPlatform()
 }
